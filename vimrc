@@ -1,9 +1,9 @@
 syntax enable
-"set nu
+set nu
+set hlsearch
 set nocompatible              " be iMproved, required
 set laststatus=2
 filetype off                  " required
-colorscheme molokai
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -13,10 +13,12 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go'
+Plugin 'Shougo/neocomplete.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'ervandew/supertab'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,7 +56,9 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
     \ }
-let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8/bin/ctags'
+let g:tagbar_ctags_bin='/usr/bin/ctags'
+let g:acp_enableAtStartup=0
+let g:neocomplete#enable_at_startup=1
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
