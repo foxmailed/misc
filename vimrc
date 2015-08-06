@@ -55,6 +55,11 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
     \ }
 let g:tagbar_ctags_bin='/usr/local/Cellar/ctags/5.8/bin/ctags'
+let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1 
+let g:go_highlight_functions = 1 
+let g:go_highlight_methods = 1 
+let g:go_highlight_structs = 1
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
